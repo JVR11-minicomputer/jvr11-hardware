@@ -1,0 +1,201 @@
+{COMPONENT C:\USERS\JIRNE\ONEDRIVE\BUREAUBLAD\DCJ11\GP_INTERFACE\GP_INTERFACE.SYM
+
+ {ENVIRONMENT
+  {PDIFvrev 3.00}
+  {Program "CUPL(WM) Version 5.0a"}
+  {DBtype "Schematic"}
+  {DBvrev 1.01}
+  {DBtime "Thu Aug 21 10:44:10 2025 "}
+  {DBunit "MIL"}
+  {DBgrid 10}
+  {Lyrstr "WIRES" 1 "BUS" 1 "GATE" 2 "IEEE" 2 "PINFUN" 3 "PINNUM" 1 
+          "PINNAM" 6 "PINCON" 4 "REFDES" 2 "ATTR" 6 "SDOT" 1 
+          "DEVICE" 5 "OUTLIN" 5 "ATTR2" 6 "NOTES" 6 "NETNAM" 4 
+          "CMPNAM" 5 "BORDER" 5}
+ }
+
+ {USER
+  {VIEW
+   {Mode SYMB}
+   {Nlst OPEN}
+   {Vw 0 0 2}
+   {Lv 12 2 2 2 0 0 2 2 2 2 0 0 2 1 2 0 0 0 0}
+   {Gs 10 10}
+  }
+ }
+
+ {DISPLAY
+  [Ly "PINNUM"]
+  [Ls "SOLID"][Wd 0]
+  [Ts 15][Tj "LC"][Tr 0][Tm "N"]
+ }
+
+ {SYMBOL
+  {PIN_DEF
+   [Ly "PINCON"]
+   {P CLK {Pt "INPUT"}{Lq 0}{Ploc 100 260}}
+   {P NRST {Pt "INPUT"}{Lq 0}{Ploc 100 220}}
+   {P GP0 {Pt "INPUT"}{Lq 0}{Ploc 100 200}}
+   {P GP1 {Pt "INPUT"}{Lq 0}{Ploc 100 180}}
+   {P GP2 {Pt "INPUT"}{Lq 0}{Ploc 100 160}}
+   {P GP3 {Pt "INPUT"}{Lq 0}{Ploc 100 140}}
+   {P GP4 {Pt "INPUT"}{Lq 0}{Ploc 100 120}}
+   {P GP5 {Pt "INPUT"}{Lq 0}{Ploc 100 100}}
+   {P GP6 {Pt "INPUT"}{Lq 0}{Ploc 100 80}}
+   {P GP7 {Pt "INPUT"}{Lq 0}{Ploc 100 60}}
+   {P NGPR {Pt "INPUT"}{Lq 0}{Ploc 100 40}}
+   {P NGPW {Pt "INPUT"}{Lq 0}{Ploc 100 20}}
+   {P NPUP {Pt "I/O"}{Lq 0}{Ploc 310 20}}
+   {P NBUSRST {Pt "I/O"}{Lq 0}{Ploc 310 40}}
+   {P MD3 {Pt "OUTPUT"}{Lq 0}{Ploc 310 60}}
+   {P MD2 {Pt "OUTPUT"}{Lq 0}{Ploc 310 80}}
+   {P MD1 {Pt "OUTPUT"}{Lq 0}{Ploc 310 100}}
+   {P ODT {Pt "OUTPUT"}{Lq 0}{Ploc 310 120}}
+   {P BUSRST {Pt "OUTPUT"}{Lq 0}{Ploc 310 140}}
+  }
+
+  {PKG
+   [Ly "REFDES"]
+   [Ts 25][Tj "CB"][Tr 0][Tm "N"]
+   {Rdl 205 290}
+
+   [Ly "PINNUM"]
+   [Ts 15][Tj "RC"]
+   {Pnl 120 270}
+   [Ts 15][Tj "RC"]
+   {Pnl 120 230}
+   {Pnl 120 210}
+   {Pnl 120 190}
+   {Pnl 120 170}
+   {Pnl 120 150}
+   {Pnl 120 130}
+   {Pnl 120 110}
+   {Pnl 120 90}
+   {Pnl 120 70}
+   {Pnl 120 50}
+   {Pnl 120 30}
+   [Ts 15][Tj "LC"]
+   {Pnl 290 30}
+   {Pnl 290 50}
+   {Pnl 290 70}
+   {Pnl 290 90}
+   {Pnl 290 110}
+   {Pnl 290 130}
+   {Pnl 290 150}
+
+   {Sd A 1 2 3 4 5 6 7 8 9 10 11 13 14 22 17 18 19 20 21}
+  }
+
+  {PIC
+   [Ly "GATE"]
+   [Ts 15][Tj "LC"][Tr 0][Tm "N"]
+   {R 130 280 280 0}
+   {L 130 260 100 260}
+   {L 130 270 140 260 130 250}
+   {L 130 220 100 220}
+   {L 130 200 100 200}
+   {L 130 180 100 180}
+   {L 130 160 100 160}
+   {L 130 140 100 140}
+   {L 130 120 100 120}
+   {L 130 100 100 100}
+   {L 130 80 100 80}
+   {L 130 60 100 60}
+   {L 130 40 100 40}
+   {L 130 20 100 20}
+   {L 280 20 310 20}
+   {L 280 40 310 40}
+   {L 280 60 310 60}
+   {L 280 80 310 80}
+   {L 280 100 310 100}
+   {L 280 120 310 120}
+   {L 280 140 310 140}
+   [Ly "PINNAM"]
+   [Tj "LC"]
+   {T "CLK" 140 260}
+   {T "NRST" 140 220}
+   {T "GP0" 140 200}
+   {T "GP1" 140 180}
+   {T "GP2" 140 160}
+   {T "GP3" 140 140}
+   {T "GP4" 140 120}
+   {T "GP5" 140 100}
+   {T "GP6" 140 80}
+   {T "GP7" 140 60}
+   {T "NGPR" 140 40}
+   {T "NGPW" 140 20}
+   [Tj "RC"]
+   {T "NPUP" 270 20}
+   {T "NBUSRST" 270 40}
+   {T "MD3" 270 60}
+   {T "MD2" 270 80}
+   {T "MD1" 270 100}
+   {T "ODT" 270 120}
+   {T "BUSRST" 270 140}
+   [Ly "DEVICE"]
+   [Tj "CT"]
+   {T "G22V10" 205 -10}
+  }
+
+  {ATR
+   {IN
+    {Org 100 20}
+    {Ty 255}
+   }
+   {EX
+    [Ly "ATTR2"]
+    [Ts 12][Tj "CT"][Tr 0][Tm "N"]
+    {At PLD C:\USERS\JIRNE\ONEDRIVE\BUREAUBLAD\DCJ11\GP_INTERFACE\GP_INTERFACE 205 280}
+   }
+  }
+ }
+
+ {DETAIL
+  {ANNOTATE
+  }
+
+  {NET_DEF
+   {N CLK
+   }
+   {N NRST
+   }
+   {N GP0
+   }
+   {N GP1
+   }
+   {N GP2
+   }
+   {N GP3
+   }
+   {N GP4
+   }
+   {N GP5
+   }
+   {N GP6
+   }
+   {N GP7
+   }
+   {N NGPR
+   }
+   {N NGPW
+   }
+   {N NPUP
+   }
+   {N NBUSRST
+   }
+   {N MD3
+   }
+   {N MD2
+   }
+   {N MD1
+   }
+   {N ODT
+   }
+   {N BUSRST
+   }
+  }
+
+  {SUBCOMP
+  }
+ }
+}

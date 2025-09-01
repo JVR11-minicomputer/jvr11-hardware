@@ -1,0 +1,18 @@
+GAL16V8
+Busctl
+
+ALE  AIO0  AIO1  AIO2  AIO3  SCTL  A0   NC   NC    GND
+NC   GPW   GPR   IVEC  RMW   RD    WRH  WRL  nALE  VCC
+
+nALE = /ALE
+WRL = AIO3 + AIO2 + AIO1 * A0 + SCTL
+WRH = AIO3 + AIO2 + AIO1 * /A0 + SCTL
+RD = /AIO3 + AIO2 * AIO0 + AIO2 * AIO1
+RMW = /AIO3 + AIO2 + /AIO1
+IVEC = /AIO3 + /AIO2 + AIO1 + /AIO0 + SCTL
+GPR = /AIO3 + /AIO2 + /AIO1 + AIO0 + SCTL
+GPW = AIO3 + /AIO2 + SCTL
+
+DESCRIPTION:
+Second version of bus control / cycle decoding logic
+Note: There is no distinction between 8 and 16 bit GPW cycles

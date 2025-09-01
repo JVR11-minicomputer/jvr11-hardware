@@ -1,0 +1,139 @@
+%SIGNAL
+PIN  21 =  BUSRST 
+PIN   1 =  CLK 
+PIN   3 =  GP0 
+PIN   4 =  GP1 
+PIN   5 =  GP2 
+PIN   6 =  GP3 
+PIN   7 =  GP4 
+PIN   8 =  GP5 
+PIN   9 =  GP6 
+PIN  10 =  GP7 
+PIN  19 =  MD1 
+PIN  18 =  MD2 
+PIN  17 =  MD3 
+PIN  20 =  ODT 
+PIN  22 =  nBUSRST 
+PIN  11 =  nGPR 
+PIN  13 =  nGPW 
+PIN  14 =  nPUP 
+PIN   2 =  nRST 
+%END
+
+%FIELD
+FIELD GP_CODE = GP7,GP6,GP5,GP4,GP3,GP2,GP1,GP0
+%END
+
+%EQUATION
+BUSRST.d  =>
+    !GP0 & !GP1 & GP2 & GP3 & !GP4 & !GP5 & !GP6 & !GP7 & nGPR & !nGPW
+  # !BUSRST & nGPW
+  # !BUSRST & !nGPR
+  # !BUSRST & !GP7
+  # !BUSRST & GP6
+  # !BUSRST & GP5
+  # !BUSRST & GP4
+  # !BUSRST & !GP3
+  # !BUSRST & !GP2
+  # !BUSRST & GP1
+  # !BUSRST & GP0
+
+BUSRST.ar MD1.ar MD2.ar MD3.ar ODT.ar  =>
+    !nRST
+
+BUSRST.sp MD1.sp MD2.sp MD3.sp ODT.sp  =>
+    0 
+
+MD1.d  =>
+    !GP0 & !GP1 & !GP2 & !GP3 & GP4 & !GP5 & !GP6 & GP7 & nGPR & !nGPW
+  # !MD1
+
+MD1.ar  =>
+    
+MD1.sp  =>
+    
+MD2.d  =>
+    !GP0 & !GP1 & GP2 & !GP3 & GP4 & !GP5 & !GP6 & GP7 & nGPR & !nGPW
+  # !MD2
+
+MD2.ar  =>
+    
+MD2.sp  =>
+    
+MD3.d  =>
+    !GP0 & !GP1 & !GP2 & GP3 & GP4 & !GP5 & !GP6 & GP7 & nGPR & !nGPW
+  # !MD3
+
+MD3.ar  =>
+    
+MD3.sp  =>
+    
+ODT.d  =>
+    !GP0 & !GP1 & GP2 & GP3 & GP4 & !GP5 & !GP6 & GP7 & nGPR & !nGPW
+  # !ODT & nGPW
+  # !ODT & !nGPR
+  # GP7 & !ODT
+  # GP6 & !ODT
+  # GP5 & !ODT
+  # !GP4 & !ODT
+  # !GP3 & !ODT
+  # !GP2 & !ODT
+  # GP1 & !ODT
+  # GP0 & !ODT
+
+ODT.ar  =>
+    
+ODT.sp  =>
+    
+busreset_clear =>
+    !GP0 & !GP1 & GP2 & GP3 & !GP4 & !GP5 & !GP6 & GP7 & nGPR & !nGPW
+
+busreset_set =>
+    !GP0 & !GP1 & GP2 & GP3 & !GP4 & !GP5 & !GP6 & !GP7 & nGPR & !nGPW
+
+nBUSRST =>
+    BUSRST
+
+nPUP =>
+    !GP0 & !GP2 & !GP3 & !GP4 & !GP5 & !GP6 & !GP7 & !nGPR & nGPW
+
+odt_enter =>
+    !GP0 & !GP1 & GP2 & GP3 & GP4 & !GP5 & !GP6 & GP7 & nGPR & !nGPW
+
+odt_exit =>
+    !GP0 & !GP1 & GP2 & GP3 & GP4 & !GP5 & !GP6 & !GP7 & nGPR & !nGPW
+
+read_powerup =>
+    !GP0 & !GP2 & !GP3 & !GP4 & !GP5 & !GP6 & !GP7 & !nGPR & nGPW
+
+test1_passed =>
+    !GP0 & !GP1 & !GP2 & !GP3 & GP4 & !GP5 & !GP6 & GP7 & nGPR & !nGPW
+
+test2_passed =>
+    !GP0 & !GP1 & GP2 & !GP3 & GP4 & !GP5 & !GP6 & GP7 & nGPR & !nGPW
+
+test3_passed =>
+    !GP0 & !GP1 & !GP2 & GP3 & GP4 & !GP5 & !GP6 & GP7 & nGPR & !nGPW
+
+BUSRST.oe  =>
+    1 
+
+MD1.oe  =>
+    1 
+
+MD2.oe  =>
+    1 
+
+MD3.oe  =>
+    1 
+
+ODT.oe  =>
+    1 
+
+nBUSRST.oe  =>
+    1 
+
+nPUP.oe  =>
+    1 
+
+%END

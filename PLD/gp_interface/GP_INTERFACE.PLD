@@ -1,0 +1,67 @@
+Name     gp_interface;
+PartNo   GAL22V10;
+Date     2025-04-24;
+Revision 01;
+Designer Jirne Van Rillaer;
+Company  None;
+Assembly None;
+Location None;
+Device   g22v10;
+
+/* ------------- PIN DEFINITIONS ------------- */
+
+PIN 1   = CLK;
+PIN 2   = nRST;
+PIN [3..10] = [GP0..GP7];
+PIN 11  = nGPR;
+PIN 13  = nGPW;
+
+PIN 14  = nPUP;
+PIN 17  = MD3;
+PIN 18  = MD2;
+PIN 19  = MD1;
+PIN 20  = ODT;
+PIN 21  = BUSRST;
+PIN 22  = nBUSRST;
+
+/* ------------- FIELD DEFINITIONS ------------- */
+
+FIELD GP_CODE = [GP7..GP0];
+
+/* ------------- INTERMEDIATE TERMS ------------- */
+
+busreset_set   = !nGPW & nGPR & (GP_CODE: 'o'014);
+busreset_clear = !nGPW & nGPR & (GP_CODE: 'o'214);
+read_powerup   = !nGPR & nGPW & ((GP_CODE: 'o'000) # (GP_CODE: 'o'002));
+odt_enter      = !nGPW & nGPR & (GP_CODE: 'o'234);
+odt_exit       = !nGPW & nGPR & (GP_CODE: 'o'034);
+test1_passed   = !nGPW & nGPR & (GP_CODE: 'o'220);
+test2_passed   = !nGPW & nGPR & (GP_CODE: 'o'224);
+test3_passed   = !nGPW & nGPR & (GP_CODE: 'o'230);
+
+/* ------------- FLIP-FLOP REGISTERS ------------- */
+
+BUSRST.d = busreset_set # (!busreset_clear & BUSRST);
+BUSRST.ar = !nRST;
+BUSRST.sp = 'b'0;
+
+ODT.d = odt_enter # (!odt_exit & ODT);
+ODT.ar = !nRST;
+ODT.sp = 'b'0;
+
+MD1.d = test1_passed # MD1;
+MD1.ar = !nRST;
+MD1.sp = 'b'0;
+
+MD2.d = test2_passed # MD2;
+MD2.ar = !nRST;
+MD2.sp = 'b'0;
+
+MD3.d = test3_passed # MD3;
+MD3.ar = !nRST;
+MD3.sp = 'b'0;
+
+/* ------------- OUTPUTS ------------- */
+
+nPUP     = !read_powerup;
+nBUSRST  = !BUSRST;

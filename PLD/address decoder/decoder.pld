@@ -1,0 +1,19 @@
+GAL22V10
+AddrDecoder
+
+A15 A14 A13 A12 A11 A10 A9  A8  A7  A6  A5  GND
+A3  A4  A16 A17 A18 A19 A20 A21 CED CER CEA VCC
+
+/CEA = A21 * A20 * A19 * A18 * A17 * A16 * A15 * A14 * A13 * 
+      A12 * A11 * A10 * A9 * A8 * /A7 * A6 * A5 * A4 * /A3
+/CED = A21 * A20 * A19 * A18 * A17 * A16 * A15 * A14 * A13 * 
+      A12 * A11 * A10 * A9 * A8 * /A7 * A6 * A5 * /A4 * A3
+/CER = /A14 * /A15 * /A16 * /A17 * /A18 * /A19 * /A20 * /A21
+
+DESCRIPTION:
+Address decoding for ACIA and 8kW RAM (test fase)
+
+CEA -> Chip enable for ACIA
+CED -> Chip enable for 7 segment display
+CER -> Chip enable for SRAM (both banks)
+

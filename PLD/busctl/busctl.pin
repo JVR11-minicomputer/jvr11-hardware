@@ -1,0 +1,25 @@
+
+
+ Pin # | Name     | Pin Type
+-----------------------------
+   1   | ALE      | Input
+   2   | AIO0     | Input
+   3   | AIO1     | Input
+   4   | AIO2     | Input
+   5   | AIO3     | Input
+   6   | SCTL     | Input
+   7   | A0       | Input
+   8   | NC       | Input
+   9   | NC       | Input
+  10   | GND      | GND
+  11   | NC       | Input
+  12   | GPW      | Output
+  13   | GPR      | Output
+  14   | IVEC     | Output
+  15   | RMW      | Output
+  16   | RD       | Output
+  17   | WRH      | Output
+  18   | WRL      | Output
+  19   | nALE     | Output
+  20   | VCC      | VCC
+

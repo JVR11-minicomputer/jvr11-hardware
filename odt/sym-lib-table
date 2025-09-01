@@ -1,0 +1,6 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "J11")(type "KiCad")(uri "${KIPRJMOD}/J11.kicad_sym")(options "")(descr ""))
+  (lib (name "Memory")(type "KiCad")(uri "${KIPRJMOD}/Memory.kicad_sym")(options "")(descr ""))
+  (lib (name "SPLD")(type "KiCad")(uri "${KIPRJMOD}/SPLD.kicad_sym")(options "")(descr ""))
+)
