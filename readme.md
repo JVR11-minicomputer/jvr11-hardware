@@ -1,4 +1,8 @@
 # JVR11 Homebrew Minicomputer - Hardware
+<p align="center">
+  <img src="./images/jvr11_current.jpg" alt="JVR11 computer current state" width="400">
+</p>
+
 This repository contains all schematics, PCB designs and PLD design sources of the JVR11, a homebrew minicomputer built around the DEC DCJ11 microprocessor. The computer will be built in multiple phases, each described in detail below.
 
 All schematics and PCBs are designed in KiCad. All designs targeting SPLDs like the GAL16V8 and 22V10 are designed in WinCUPL, except the old sources, which were designed in GALASM. These will be replaced later. The CPLDs I used are all part of the ATF1504AS series, which can be used as an alternative to the MAX7000 series. All RTL is written in SystemVerilog and compiled using an older version of Quartus, targeting the MAX7000 series. The outputs were then converted to JEDEC using Atmel's POF2JED tool.
