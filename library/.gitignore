@@ -1,2 +1,5 @@
 # KiCad symbols and footprints
 *.bak
+
+# Inventor 3D projects
+3D/**/OldVersions
