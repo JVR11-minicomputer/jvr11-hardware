@@ -75,6 +75,26 @@
 		(uuid "0784eaf3-7e07-404d-b676-966d8f9034b2")
 	)
 	(fp_line
+		(start -14.986 -37.76)
+		(end -14.986 37.846)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "0de6dfa3-cfa4-4d13-a3b1-c15baa4726b4")
+	)
+	(fp_line
+		(start 14.986 -37.76)
+		(end 14.986 38.1)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "a660d02f-8875-48c5-8420-6e25286d44b0")
+	)
+	(fp_line
 		(start 18.009999 38.1)
 		(end 18.01 -37.76)
 		(stroke
@@ -722,4 +742,15 @@
 		(uuid "b4585a3b-4aa2-41ca-b731-fa77b2852d2f")
 	)
 	(embedded_fonts no)
+	(model "${KIPRJMOD}/../../library/3D/exports/DCJ11.step"
+		(offset
+			(xyz -38.75 16 -0.5)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -0)
+		)
+	)
 )
