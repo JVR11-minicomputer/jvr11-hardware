@@ -1,0 +1,6 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "JVR11")(type "KiCad")(uri "${KIPRJMOD}/../../library/jvr11_footprints.pretty")(options "")(descr ""))
+  (lib (name "JVR11_3D")(type "KiCad")(uri "${KIPRJMOD}/../../library/3D/exports")(options "")(descr ""))
+  (lib (name "no_silkscreen")(type "KiCad")(uri "${KIPRJMOD}/no_silkscreen.pretty")(options "")(descr ""))
+)
