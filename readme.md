@@ -63,5 +63,15 @@ The address decoding in the bridge will be based on two ROM chips: one with a pe
 
 At this moment I've build the write FIFO on breadboard as well as some other sections of the bridge's datapath. Both the system- and IO-side control paths are almost ready to be build on breadboard.
 
+## Special thanks to PCBWay!
+<img src="./images/pcbway_logo.png" alt="PCBWay logo" width="200"><br />
+
+I would like to sincerely thank PCBWay for sponsoring this project. Their support has been invaluable in bringing this work to life. PCBWay is a leading manufacturer specializing in high-quality printed circuit boards, offering services ranging from rapid PCB prototyping to full-scale production. In addition to PCBs they also provide services like PCB assembly, CNC, 3D printing and more. 
+
+I have been very pleased with the quality of the PCBs and SMD stencils I received. The precision, finish, and reliability exceeded my expectations. Overall, my experience with PCBWay has been excellent. Therefore I highly recommend others to check out [PCBWay](https://www.pcbway.com/) for their own projects.
+
+<br />A picture of the boards I received: <br /><br />
+<img src="./images/memory_pcb.jpg" alt="PCBWay logo" width="200">
+
 ## License
 The content of this project is licensed under the [CERN-OHL-P version 2 license](https://cern-ohl.web.cern.ch/).

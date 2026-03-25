@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "pcbway")(type "KiCad")(uri "${KIPRJMOD}/../../library/pcbway.pretty")(options "")(descr ""))
+)
